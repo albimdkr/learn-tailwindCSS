@@ -1,0 +1,11 @@
+[1. INSTALATIONS & CONFIGURATIONS]
+npm init
+npm i -D tailwindcss postcss autoprefixer
+npx tailwindcss init //create file config tailwindcss
+paste 3 layers base, component, utilities => input.css
+build => npx tailwindcss -i ./src/[namefile].css -o ./src/output.css --watch
+final bulil => save tailwind.config.js
+config runner script package.json to start again the => npx tailwindcss -i ./src/[namefile].css -o ./src/output.css --watch
+if project complete, minify the css code => npx tailwindcss -o ./public/css/final.css --minify
+
+[2. UTLILTIES]
