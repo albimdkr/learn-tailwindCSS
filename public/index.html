@@ -13,8 +13,13 @@
     <title>TailwindCSS</title>
 </head>
 <body class="m-13 max-w-screen-2xl font-inter">
-
-<section class="max-w-screen-2xl border-solid border-2 border-slate-200 rounded-2xl">
+    <div class="button r" id="wrapper-checkbox">
+        <input type="checkbox" id="completeCheckbox" class="checkboxToggleSwitch" />
+        <div class="knobs"></div>
+        <div class="layer"></div>
+    </div>              
+    
+    <section class="max-w-screen-2xl border-solid border-2 border-slate-200 rounded-2xl">
     <h1 class="m-10 text-5xl font-bold text-center">Say Hello To <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400">TailwindCSS</span>👋</h1>
     <div class="m-10 p-40 bg-gradient-to-tr from-blue-600 to-green-400 rounded-2xl shadow-xl"><h1 class="mx-auto text-center text-white"><i class='bx bxl-tailwind-css text-white text-7xl'></i>
     <i class='bx bxl-tailwind-css text-blue-500'></i></h1></div>
@@ -98,10 +103,10 @@
         <input type="number" placeholder="Input number" class="px-3 py-2 border shadow w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-400 rounded-md invalid:text-pink-500 invalid:focus:ring-pink-500 invalid:focus:border-pink-700 peer" />
         <p class="text-sm m-1 text-pink-500 invisible peer-invalid:visible">Telephone invalid!</p>
 
-        <label for="project" class="font-semibold my-4 mx-auto after:content-['*'] after:text-pink-500 after:ml-0.5">Project Answer ZIP</label>
-        <input type="file" placeholder="Input your project" class="px-3 py-2 block w-full text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-blue-700 hover:file:bg-blue-100 peer" />
-        <p class="text-sm m-1 text-pink-500 invisible peer-invalid:visible">Project invalid!</p>
-        <button class="mt-1 bg-blue-500 text-white px-7 py-2 rounded-lg hover:bg-blue-600 active:bg-blue-600 focus:ring focus:ring-blue-200">Submit</button>
+        <label for="project" class="font-semibold my-4 mx-auto after:content-['*'] after:text-pink-500 after:ml-0.5 text-center">Project Answer ZIP</label>
+            <input type="file" class="px-5 py-2 text-sm text-slate-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-violet-50 file:text-blue-700 hover:file:bg-blue-100 mx-5 peer" />
+            <p class="text-sm m-1 text-pink-500 invisible peer-invalid:visible">Project invalid!</p>
+        <button class="bg-blue-500 text-white px-7 py-2 rounded-lg hover:bg-blue-600 active:bg-blue-600 focus:ring focus:ring-blue-200">Submit</button>
     </form>
 </section>
 
