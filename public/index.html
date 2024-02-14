@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,22 +12,28 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>TailwindCSS</title>
 </head>
-<body class="m-13 max-w-screen-2xl font-inter">
-    <div class="button r" id="wrapper-checkbox">
-        <input type="checkbox" id="completeCheckbox" class="checkboxToggleSwitch" />
-        <div class="knobs"></div>
-        <div class="layer"></div>
-    </div>              
-    
-    <section class="max-w-screen-2xl border-solid border-2 border-slate-200 rounded-2xl">
-    <h1 class="m-10 text-5xl font-bold text-center">Say Hello To <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400">TailwindCSS</span>👋</h1>
-    <div class="m-10 p-40 bg-gradient-to-tr from-blue-600 to-green-400 rounded-2xl shadow-xl"><h1 class="mx-auto text-center text-white"><i class='bx bxl-tailwind-css text-white text-7xl'></i>
-    <i class='bx bxl-tailwind-css text-blue-500'></i></h1></div>
+<body class="m-13 max-w-screen-2xl font-inter dark:bg-slate-900 dark:text-slate-200">
+
+<div class="flex justify-end my-5">
+    <span class="text-sm text-slate-900 mr-2 dark:text-slate-200">Light</span>
+    <input type="checkbox" id="toggle" class="hidden">
+    <label for="toggle">
+        <div class="w-9 h-5 bg-slate-500 rounded-full flex items-center cursor-pointer">
+            <div class="w-4  h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+    </label>
+    <span class="text-sm text-slate-900 ml-2 dark:text-slate-200">Dark</span>
+</div>
+
+<section class="max-w-screen-2xl border-solid border-2 border-slate-200 rounded-2xl">
+        <h1 class="m-10 text-5xl font-bold text-center">Say Hello To <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400">TailwindCSS</span>👋</h1>
+        <div class="m-10 p-40 bg-gradient-to-tr from-blue-600 to-green-400 rounded-2xl shadow-xl"><h1 class="mx-auto text-center text-white"><i class='bx bxl-tailwind-css text-white text-7xl'></i>
+        <i class='bx bxl-tailwind-css text-blue-500'></i></h1></div>
 
     <div class="p-5 m-10 border border-slate-200 rounded-xl shadow-md">
         <h1 class="font-bold text-3xl">Introduction to <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400">TailwindCSS</span></h1>
         <h6 class="mb-5">By <span class="font-bold">Albi Mudakar</span></h6>
-        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus optio animi voluptates perspiciatis architecto sit tempore vero repellat labore consectetur provident quae ratione nulla velit reiciendis dolorum iste, officia deserunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam quasi dolor, dicta dolore nam ipsa labore corrupti voluptate animi commodi recusandae sit alias nulla distinctio error, autem deleniti? Voluptate!</p>
+        <p class="text-justify dark:text-slate-200">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus optio animi voluptates perspiciatis architecto sit tempore vero repellat labore consectetur provident quae ratione nulla velit reiciendis dolorum iste, officia deserunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam quasi dolor, dicta dolore nam ipsa labore corrupti voluptate animi commodi recusandae sit alias nulla distinctio error, autem deleniti? Voluptate!</p>
         <button class="my-5 bg-blue-500 text-white px-7 py-2 rounded-lg hover:bg-blue-600 active:bg-blue-700 focus:ring focus:ring-blue-200">Detail</button>
     </div>
 
@@ -58,49 +64,48 @@
         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus optio animi voluptates perspiciatis architecto sit tempore vero repellat labore consectetur provident quae ratione nulla velit reiciendis dolorum iste, officia deserunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam quasi dolor, dicta dolore nam ipsa labore corrupti voluptate animi commodi recusandae sit alias nulla distinctio error, autem deleniti? Voluptate!</p>
         <button class="my-5 bg-blue-500 text-white px-7 py-2 rounded-lg hover:bg-blue-600 active:bg-blue-700 focus:ring focus:ring-blue-200">Detail</button>
     </div>
+</section>
 
-    <section class="flex justify-between max-w-screen-2xl">
+    <section class="flex justify-between max-w-screen-2xl border-solid border-2 border-slate-200 rounded-2xl my-10 ">
         <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-gradient-to-tr from-blue-600 to-green-400 group">
             <h5 class="font-bold mb-3 group-hover:text-white">Assignment <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400 group-hover:text-white">Project 1</span></h5>
             <div class="max-w-xl mx-auto h-44 bg-cover rounded-2xl" style="background-image: url('https://images.unsplash.com/photo-1552308995-2baac1ad5490?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZ3JhbW1pbmd8fHx8fHwxNzA3NzkzMzgx&ixlib=rb-4.0.3&q=80&w=1000');"></div>
-            <p class="text-justify text-slate-500 mt-5 group-hover:text-white selection:bg-green-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque perspiciatis, repellat et incidunt, perferendis excepturi odit cum est aliquam numquam natus similique iste fugit accusamus, quibusdam laudantium! Aut voluptates quisquam earum vero fugiat, minus dignissimos perspiciatis tempora illo culpa natus alias distinctio esse ipsam cumque impedit.</p>
+            <p class="text-justify text-slate-500 mt-5 group-hover:text-white selection:bg-green-400 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque perspiciatis</p>
             <button class="mt-5 bg-blue-500 text-white px-7 py-2 rounded-lg hover:bg-blue-600 active:bg-blue-700 focus:ring focus:ring-blue-200">More</button>
         </div>
     
         <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-gradient-to-tr from-blue-600 to-green-400 group">
             <h5 class="font-bold mb-3 group-hover:text-white">Assignment <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400 group-hover:text-white">Project 2</span></h5>
             <div class="max-w-xl mx-auto h-44 bg-cover rounded-2xl " style="background-image: url('https://source.unsplash.com/1000x600?programming');"></div>
-            <p class="text-justify text-slate-500 mt-5 group-hover:text-white selection:bg-green-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque perspiciatis, repellat et incidunt, perferendis excepturi odit cum est aliquam numquam natus similique iste fugit accusamus, quibusdam laudantium! Aut voluptates quisquam earum vero fugiat, minus dignissimos perspiciatis tempora illo culpa natus alias distinctio esse ipsam cumque impedit.</p>
+            <p class="text-justify text-slate-500 mt-5 group-hover:text-white selection:bg-green-400 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque perspiciatis</p>
             <button class="mt-5 bg-blue-500 text-white px-7 py-2 rounded-lg hover:bg-blue-600 active:bg-blue-700 focus:ring focus:ring-blue-200">More</button>
         </div>
-    </section>
-
-    <section class="flex justify-around max-w-screen-2xl">
         <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-gradient-to-tr from-blue-600 to-green-400 group">
             <h5 class="font-bold mb-3 group-hover:text-white">Assignment <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400 group-hover:text-white">Project 3</span></h5>
             <div class="max-w-xl mx-auto h-44 bg-cover rounded-2xl" style="background-image: url('https://source.unsplash.com/1000x600?computer');"></div>
-            <p class="text-justify text-slate-500 mt-5 group-hover:text-white selection:bg-green-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque perspiciatis, repellat et incidunt, perferendis excepturi odit cum est aliquam numquam natus similique iste fugit accusamus, quibusdam laudantium! Aut voluptates quisquam earum vero fugiat, minus dignissimos perspiciatis tempora illo culpa natus alias distinctio esse ipsam cumque impedit.</p>
+            <p class="text-justify text-slate-500 mt-5 group-hover:text-white selection:bg-green-400 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque perspiciatis</p>
             <button class="mt-5 bg-blue-500 text-white px-7 py-2 rounded-lg hover:bg-blue-600 active:bg-blue-700 focus:ring focus:ring-blue-200">More</button>
         </div>
     
         <div class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md hover:bg-gradient-to-tr from-blue-600 to-green-400 group">
             <h5 class="font-bold mb-3 group-hover:text-white">Assignment <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400 group-hover:text-white">Project 4</span></h5>
             <div class="max-w-xl mx-auto h-44 bg-cover rounded-2xl " style="background-image: url('https://source.unsplash.com/1000x600?coding');"></div>
-            <p class="text-justify text-slate-500 mt-5 group-hover:text-white selection:bg-green-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque perspiciatis, repellat et incidunt, perferendis excepturi odit cum est aliquam numquam natus similique iste fugit accusamus, quibusdam laudantium! Aut voluptates quisquam earum vero fugiat, minus dignissimos perspiciatis tempora illo culpa natus alias distinctio esse ipsam cumque impedit.</p>
+            <p class="text-justify text-slate-500 mt-5 group-hover:text-white selection:bg-green-400 dark:text-slate-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi cumque perspiciatis</p>
             <button class="mt-5 bg-blue-500 text-white px-7 py-2 rounded-lg hover:bg-blue-600 active:bg-blue-700 focus:ring focus:ring-blue-200">More</button>
         </div>
+
+
     </section>
-</section>
 
 <section class="max-w-screen-2xl my-10 border border-slate-200 rounded-xl mx-auto shadow-md p-5">
     <h2 class="mb-5 font-bold">If you finished the assignment, please <span class="text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-green-400 group-hover:text-white">submit</span> your project in file  format ZIP</h2>
     <form action="#">
         <label for="email" class="font-semibold my-4 mx-auto after:content-['*'] after:text-pink-500 after:ml-0.5">Email</label>
-        <input type="email" placeholder="Input email" class="px-3 py-2 border shadow w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-400 rounded-md invalid:text-pink-500 invalid:focus:ring-pink-500 invalid:focus:border-pink-700 peer" />
+        <input type="email" placeholder="Input email" class="px-3 py-2 border shadow w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-400 rounded-md invalid:text-pink-500 invalid:focus:ring-pink-500 invalid:focus:border-pink-700 dark:placeholder:text-slate-900 peer" />
         <p class="text-sm m-1 text-pink-500 invisible peer-invalid:visible">Email invalid!</p>
 
         <label for="number" class="font-semibold my-4 mx-auto after:content-['*'] after:text-pink-500 after:ml-0.5">Telephone</label>
-        <input type="number" placeholder="Input number" class="px-3 py-2 border shadow w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-400 rounded-md invalid:text-pink-500 invalid:focus:ring-pink-500 invalid:focus:border-pink-700 peer" />
+        <input type="number" placeholder="Input number" class="px-3 py-2 border shadow w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-blue-600 focus:border-blue-400 rounded-md invalid:text-pink-500 invalid:focus:ring-pink-500 invalid:focus:border-pink-700 dark:placeholder:text-slate-900 peer" />
         <p class="text-sm m-1 text-pink-500 invisible peer-invalid:visible">Telephone invalid!</p>
 
         <label for="project" class="font-semibold my-4 mx-auto after:content-['*'] after:text-pink-500 after:ml-0.5 text-center">Project Answer ZIP</label>
@@ -119,6 +124,14 @@
 <div class="max-w-xl h-96 bg-teal-400 mx-auto mt-5 bg-cover rounded-2xl shadow-xl" style="background-image: url('https://images.unsplash.com/photo-1552308995-2baac1ad5490?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8cHJvZ3JhbW1pbmd8fHx8fHwxNzA3NzkzMzgx&ixlib=rb-4.0.3&q=80&w=1000');"></div> -->
 
 
+<script>
+    const checkbox = document.getElementById('toggle');
+    const html = document.querySelector('html');
 
+    checkbox.addEventListener('click', function() {
+        checkbox.checked ? html.classList.add('dark') : html.classList.remove('dark');
+        console.log('click detected');
+    });
+</script>
 </body>
 </html>
