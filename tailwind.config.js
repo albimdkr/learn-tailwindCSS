@@ -8,8 +8,11 @@ module.exports = {
         13: '3.25rem',
       },
       fontFamily: {
-        inter: ['Inter']
-      }
+        inter: ['Inter'],
+      },
+      colors: {
+        h1GreenTetik: '#0D9276',
+      },
     },
   },
   plugins: [],

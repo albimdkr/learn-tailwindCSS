@@ -2,6 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-#toggle:checked ~ label div.toggle-circle {
-  @apply translate-x-5;
+
+@layer base {
+  h1 {
+    /* before: use native CSS */
+    /* font-size: 3.75rem;
+    color: red; */
+
+    /* after: using @apply to implement utlities tailwind */
+    @apply text-6xl text-green-500;
+    
+    /* Function */
+    color: theme(colors.h1GreenTetik)
+  }
+}
+
+
+@layer components {
+  .grid-card {
+    @apply bg-blue-500 aspect-[4/3] rounded-lg md:aspect-[3/4] xl:aspect-[4/3]  overflow-hidden relative hover:scale-95 hover:transition-all duration-500 cursor-pointer;
+  }
+
+  .grid-card-img {
+    @apply w-full h-full bg-cover bg-center absolute group-hover:scale-125 group-hover:rotate-12 transition-all duration-500;
+  }
+} 
+
+
+
+@layer utilities {
+  #toggle:checked ~ label div.toggle-circle {
+    @apply translate-x-5;
+  }
 }
